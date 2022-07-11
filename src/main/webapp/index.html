@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@mui/material@latest/umd/material-ui.development.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <!-- css styles -->
+    <link rel="stylesheet" href="./Components/Navbar/Navbar.css">
+
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+
+<!-- importing ajaxFiles -->
+
+<script src="./assets/ajaxFunctions/user.js"></script>
+
+<!-- importing Components -->
+
+
+<script src="./Components/Home/Home.js" type="text/babel"></script>
+<script src="./Components/Navbar/Navbar.js" type="text/babel"></script>
+<script type="text/babel"> 
+    function App() {
+        return (
+            <div> 
+                <Home />
+            </div>
+        );
+    }
+    const { createRoot } = ReactDOM;
+    const container = document.getElementById('root');
+    const root = createRoot(container);
+    root.render(<App />);
+</script>
+
+</html>
